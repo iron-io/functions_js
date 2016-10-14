@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('./ErrorBody'), require('./Route'));
   } else {
     // Browser globals (root is window)
-    if (!root.FunctionsJs) {
-      root.FunctionsJs = {};
+    if (!root.IronFunctions) {
+      root.IronFunctions = {};
     }
-    root.FunctionsJs.RoutesWrapper = factory(root.FunctionsJs.ApiClient, root.FunctionsJs.ErrorBody, root.FunctionsJs.Route);
+    root.IronFunctions.RoutesWrapper = factory(root.IronFunctions.ApiClient, root.IronFunctions.ErrorBody, root.IronFunctions.Route);
   }
 }(this, function(ApiClient, ErrorBody, Route) {
   'use strict';

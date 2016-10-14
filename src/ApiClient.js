@@ -31,10 +31,10 @@
     module.exports = factory(require('superagent'));
   } else {
     // Browser globals (root is window)
-    if (!root.FunctionsJs) {
-      root.FunctionsJs = {};
+    if (!root.IronFunctions) {
+      root.IronFunctions = {};
     }
-    root.FunctionsJs.ApiClient = factory(root.superagent);
+    root.IronFunctions.ApiClient = factory(root.superagent);
   }
 }(this, function(superagent) {
   'use strict';

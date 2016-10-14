@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.TasksWrapper();
+    instance = new IronFunctions.TasksWrapper();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('TasksWrapper', function() {
     it('should create an instance of TasksWrapper', function() {
       // uncomment below and update the code to test TasksWrapper
-      //var instane = new FunctionsJs.TasksWrapper();
-      //expect(instance).to.be.a(FunctionsJs.TasksWrapper);
+      //var instane = new IronFunctions.TasksWrapper();
+      //expect(instance).to.be.a(IronFunctions.TasksWrapper);
     });
 
     it('should have the property tasks (base name: "tasks")', function() {
       // uncomment below and update the code to test the property tasks
-      //var instane = new FunctionsJs.TasksWrapper();
+      //var instane = new IronFunctions.TasksWrapper();
       //expect(instance).to.be();
     });
 
     it('should have the property cursor (base name: "cursor")', function() {
       // uncomment below and update the code to test the property cursor
-      //var instane = new FunctionsJs.TasksWrapper();
+      //var instane = new IronFunctions.TasksWrapper();
       //expect(instance).to.be();
     });
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
-      //var instane = new FunctionsJs.TasksWrapper();
+      //var instane = new IronFunctions.TasksWrapper();
       //expect(instance).to.be();
     });
 

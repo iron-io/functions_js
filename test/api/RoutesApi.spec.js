@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.RoutesApi();
+    instance = new IronFunctions.RoutesApi();
   });
 
   var getProperty = function(object, getter, property) {

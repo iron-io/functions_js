@@ -1,4 +1,4 @@
-# FunctionsJs.AppsWrapper
+# IronFunctions.AppsWrapper
 
 ## Properties
 Name | Type | Description | Notes

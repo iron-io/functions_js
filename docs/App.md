@@ -1,4 +1,4 @@
-# FunctionsJs.App
+# IronFunctions.App
 
 ## Properties
 Name | Type | Description | Notes

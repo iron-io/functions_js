@@ -1,4 +1,4 @@
-# FunctionsJs.TasksApi
+# IronFunctions.TasksApi
 
 All URIs are relative to *https://127.0.0.1:8080/v1*
 
@@ -17,9 +17,9 @@ Gets the next task in the queue, ready for processing. Titan may return &lt;&#x3
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.TasksApi();
+var apiInstance = new IronFunctions.TasksApi();
 
 var opts = { 
   'n': 1 // Integer | Number of tasks to return.

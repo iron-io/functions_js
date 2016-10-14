@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.Error();
+    instance = new IronFunctions.Error();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('Error', function() {
     it('should create an instance of Error', function() {
       // uncomment below and update the code to test Error
-      //var instane = new FunctionsJs.Error();
-      //expect(instance).to.be.a(FunctionsJs.Error);
+      //var instane = new IronFunctions.Error();
+      //expect(instance).to.be.a(IronFunctions.Error);
     });
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
-      //var instane = new FunctionsJs.Error();
+      //var instane = new IronFunctions.Error();
       //expect(instance).to.be();
     });
 

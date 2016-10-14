@@ -1,4 +1,4 @@
-# FunctionsJs.RoutesApi
+# IronFunctions.RoutesApi
 
 All URIs are relative to *https://127.0.0.1:8080/v1*
 
@@ -20,9 +20,9 @@ This will list routes for a particular app.
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.RoutesApi();
+var apiInstance = new IronFunctions.RoutesApi();
 
 var app = "app_example"; // String | Name of app for this set of routes.
 
@@ -66,13 +66,13 @@ Create a new route
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.RoutesApi();
+var apiInstance = new IronFunctions.RoutesApi();
 
 var app = "app_example"; // String | name of the app.
 
-var body = new FunctionsJs.NewRoutesWrapper(); // NewRoutesWrapper | Array of routes to post.
+var body = new IronFunctions.NewRoutesWrapper(); // NewRoutesWrapper | Array of routes to post.
 
 
 var callback = function(error, data, response) {
@@ -115,9 +115,9 @@ Deletes the route.
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.RoutesApi();
+var apiInstance = new IronFunctions.RoutesApi();
 
 var app = "app_example"; // String | Name of app for this set of routes.
 
@@ -164,9 +164,9 @@ Gets a route by name.
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.RoutesApi();
+var apiInstance = new IronFunctions.RoutesApi();
 
 var app = "app_example"; // String | Name of app for this set of routes.
 

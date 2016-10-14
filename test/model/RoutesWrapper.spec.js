@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.RoutesWrapper();
+    instance = new IronFunctions.RoutesWrapper();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('RoutesWrapper', function() {
     it('should create an instance of RoutesWrapper', function() {
       // uncomment below and update the code to test RoutesWrapper
-      //var instane = new FunctionsJs.RoutesWrapper();
-      //expect(instance).to.be.a(FunctionsJs.RoutesWrapper);
+      //var instane = new IronFunctions.RoutesWrapper();
+      //expect(instance).to.be.a(IronFunctions.RoutesWrapper);
     });
 
     it('should have the property routes (base name: "routes")', function() {
       // uncomment below and update the code to test the property routes
-      //var instane = new FunctionsJs.RoutesWrapper();
+      //var instane = new IronFunctions.RoutesWrapper();
       //expect(instance).to.be();
     });
 
     it('should have the property cursor (base name: "cursor")', function() {
       // uncomment below and update the code to test the property cursor
-      //var instane = new FunctionsJs.RoutesWrapper();
+      //var instane = new IronFunctions.RoutesWrapper();
       //expect(instance).to.be();
     });
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
-      //var instane = new FunctionsJs.RoutesWrapper();
+      //var instane = new IronFunctions.RoutesWrapper();
       //expect(instance).to.be();
     });
 

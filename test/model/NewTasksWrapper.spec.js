@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.NewTasksWrapper();
+    instance = new IronFunctions.NewTasksWrapper();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('NewTasksWrapper', function() {
     it('should create an instance of NewTasksWrapper', function() {
       // uncomment below and update the code to test NewTasksWrapper
-      //var instane = new FunctionsJs.NewTasksWrapper();
-      //expect(instance).to.be.a(FunctionsJs.NewTasksWrapper);
+      //var instane = new IronFunctions.NewTasksWrapper();
+      //expect(instance).to.be.a(IronFunctions.NewTasksWrapper);
     });
 
     it('should have the property tasks (base name: "tasks")', function() {
       // uncomment below and update the code to test the property tasks
-      //var instane = new FunctionsJs.NewTasksWrapper();
+      //var instane = new IronFunctions.NewTasksWrapper();
       //expect(instance).to.be();
     });
 

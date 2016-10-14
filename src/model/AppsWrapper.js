@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('./App'));
   } else {
     // Browser globals (root is window)
-    if (!root.FunctionsJs) {
-      root.FunctionsJs = {};
+    if (!root.IronFunctions) {
+      root.IronFunctions = {};
     }
-    root.FunctionsJs.AppsWrapper = factory(root.FunctionsJs.ApiClient, root.FunctionsJs.App);
+    root.IronFunctions.AppsWrapper = factory(root.IronFunctions.ApiClient, root.IronFunctions.App);
   }
 }(this, function(ApiClient, App) {
   'use strict';

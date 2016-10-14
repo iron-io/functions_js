@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.ErrorBody();
+    instance = new IronFunctions.ErrorBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('ErrorBody', function() {
     it('should create an instance of ErrorBody', function() {
       // uncomment below and update the code to test ErrorBody
-      //var instane = new FunctionsJs.ErrorBody();
-      //expect(instance).to.be.a(FunctionsJs.ErrorBody);
+      //var instane = new IronFunctions.ErrorBody();
+      //expect(instance).to.be.a(IronFunctions.ErrorBody);
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new FunctionsJs.ErrorBody();
+      //var instane = new IronFunctions.ErrorBody();
       //expect(instance).to.be();
     });
 
     it('should have the property fields (base name: "fields")', function() {
       // uncomment below and update the code to test the property fields
-      //var instane = new FunctionsJs.ErrorBody();
+      //var instane = new IronFunctions.ErrorBody();
       //expect(instance).to.be();
     });
 

@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.AppsWrapper();
+    instance = new IronFunctions.AppsWrapper();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('AppsWrapper', function() {
     it('should create an instance of AppsWrapper', function() {
       // uncomment below and update the code to test AppsWrapper
-      //var instane = new FunctionsJs.AppsWrapper();
-      //expect(instance).to.be.a(FunctionsJs.AppsWrapper);
+      //var instane = new IronFunctions.AppsWrapper();
+      //expect(instance).to.be.a(IronFunctions.AppsWrapper);
     });
 
     it('should have the property apps (base name: "apps")', function() {
       // uncomment below and update the code to test the property apps
-      //var instane = new FunctionsJs.AppsWrapper();
+      //var instane = new IronFunctions.AppsWrapper();
       //expect(instance).to.be();
     });
 

@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FunctionsJs);
+    factory(root.expect, root.IronFunctions);
   }
-}(this, function(expect, FunctionsJs) {
+}(this, function(expect, IronFunctions) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FunctionsJs.Route();
+    instance = new IronFunctions.Route();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,31 +61,31 @@
   describe('Route', function() {
     it('should create an instance of Route', function() {
       // uncomment below and update the code to test Route
-      //var instane = new FunctionsJs.Route();
-      //expect(instance).to.be.a(FunctionsJs.Route);
+      //var instane = new IronFunctions.Route();
+      //expect(instance).to.be.a(IronFunctions.Route);
     });
 
     it('should have the property appName (base name: "app_name")', function() {
       // uncomment below and update the code to test the property appName
-      //var instane = new FunctionsJs.Route();
+      //var instane = new IronFunctions.Route();
       //expect(instance).to.be();
     });
 
     it('should have the property path (base name: "path")', function() {
       // uncomment below and update the code to test the property path
-      //var instane = new FunctionsJs.Route();
+      //var instane = new IronFunctions.Route();
       //expect(instance).to.be();
     });
 
     it('should have the property image (base name: "image")', function() {
       // uncomment below and update the code to test the property image
-      //var instane = new FunctionsJs.Route();
+      //var instane = new IronFunctions.Route();
       //expect(instance).to.be();
     });
 
     it('should have the property headers (base name: "headers")', function() {
       // uncomment below and update the code to test the property headers
-      //var instane = new FunctionsJs.Route();
+      //var instane = new IronFunctions.Route();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# FunctionsJs.Route
+# IronFunctions.Route
 
 ## Properties
 Name | Type | Description | Notes

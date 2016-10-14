@@ -1,4 +1,4 @@
-# FunctionsJs.ErrorBody
+# IronFunctions.ErrorBody
 
 ## Properties
 Name | Type | Description | Notes

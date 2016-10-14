@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/TasksWrapper'), require('../model/Error'));
   } else {
     // Browser globals (root is window)
-    if (!root.FunctionsJs) {
-      root.FunctionsJs = {};
+    if (!root.IronFunctions) {
+      root.IronFunctions = {};
     }
-    root.FunctionsJs.TasksApi = factory(root.FunctionsJs.ApiClient, root.FunctionsJs.TasksWrapper, root.FunctionsJs.Error);
+    root.IronFunctions.TasksApi = factory(root.IronFunctions.ApiClient, root.IronFunctions.TasksWrapper, root.IronFunctions.Error);
   }
 }(this, function(ApiClient, TasksWrapper, Error) {
   'use strict';

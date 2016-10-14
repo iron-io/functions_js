@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.FunctionsJs) {
-      root.FunctionsJs = {};
+    if (!root.IronFunctions) {
+      root.IronFunctions = {};
     }
-    root.FunctionsJs.ErrorBody = factory(root.FunctionsJs.ApiClient);
+    root.IronFunctions.ErrorBody = factory(root.IronFunctions.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';

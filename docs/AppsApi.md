@@ -1,4 +1,4 @@
-# FunctionsJs.AppsApi
+# IronFunctions.AppsApi
 
 All URIs are relative to *https://127.0.0.1:8080/v1*
 
@@ -20,9 +20,9 @@ This gives more details about a app, such as statistics.
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.AppsApi();
+var apiInstance = new IronFunctions.AppsApi();
 
 var app = "app_example"; // String | name of the app.
 
@@ -66,13 +66,13 @@ You can set app level settings here.
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.AppsApi();
+var apiInstance = new IronFunctions.AppsApi();
 
 var app = "app_example"; // String | name of the app.
 
-var body = new FunctionsJs.AppWrapper(); // AppWrapper | App to post.
+var body = new IronFunctions.AppWrapper(); // AppWrapper | App to post.
 
 
 var callback = function(error, data, response) {
@@ -115,9 +115,9 @@ Get a list of all the apps in the system.
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.AppsApi();
+var apiInstance = new IronFunctions.AppsApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -155,11 +155,11 @@ Insert a new app
 
 ### Example
 ```javascript
-var FunctionsJs = require('functions_js');
+var IronFunctions = require('iron_functions');
 
-var apiInstance = new FunctionsJs.AppsApi();
+var apiInstance = new IronFunctions.AppsApi();
 
-var body = new FunctionsJs.AppWrapper(); // AppWrapper | App to post.
+var body = new IronFunctions.AppWrapper(); // AppWrapper | App to post.
 
 
 var callback = function(error, data, response) {

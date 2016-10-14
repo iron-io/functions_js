@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/Error'), require('../model/RoutesWrapper'), require('../model/NewRoutesWrapper'), require('../model/RouteWrapper'));
   } else {
     // Browser globals (root is window)
-    if (!root.FunctionsJs) {
-      root.FunctionsJs = {};
+    if (!root.IronFunctions) {
+      root.IronFunctions = {};
     }
-    root.FunctionsJs.RoutesApi = factory(root.FunctionsJs.ApiClient, root.FunctionsJs.Error, root.FunctionsJs.RoutesWrapper, root.FunctionsJs.NewRoutesWrapper, root.FunctionsJs.RouteWrapper);
+    root.IronFunctions.RoutesApi = factory(root.IronFunctions.ApiClient, root.IronFunctions.Error, root.IronFunctions.RoutesWrapper, root.IronFunctions.NewRoutesWrapper, root.IronFunctions.RouteWrapper);
   }
 }(this, function(ApiClient, Error, RoutesWrapper, NewRoutesWrapper, RouteWrapper) {
   'use strict';
