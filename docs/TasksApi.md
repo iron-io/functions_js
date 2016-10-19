@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="tasksGet"></a>
 # **tasksGet**
-> TasksWrapper tasksGet(opts)
+> TaskWrapper tasksGet(opts)
 
 Get next task.
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TasksWrapper**](TasksWrapper.md)
+[**TaskWrapper**](TaskWrapper.md)
 
 ### Authorization
 

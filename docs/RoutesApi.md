@@ -72,7 +72,7 @@ var apiInstance = new IronFunctions.RoutesApi();
 
 var app = "app_example"; // String | name of the app.
 
-var body = new IronFunctions.NewRoutesWrapper(); // NewRoutesWrapper | Array of routes to post.
+var body = new IronFunctions.RoutesWrapper(); // RoutesWrapper | Array of routes to post.
 
 
 var callback = function(error, data, response) {
@@ -90,7 +90,7 @@ apiInstance.appsAppRoutesPost(app, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app** | **String**| name of the app. | 
- **body** | [**NewRoutesWrapper**](NewRoutesWrapper.md)| Array of routes to post. | 
+ **body** | [**RoutesWrapper**](RoutesWrapper.md)| Array of routes to post. | 
 
 ### Return type
 

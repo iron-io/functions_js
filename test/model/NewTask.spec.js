@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new IronFunctions.App();
+    instance = new IronFunctions.NewTask();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,16 +58,22 @@
       object[property] = value;
   }
 
-  describe('App', function() {
-    it('should create an instance of App', function() {
-      // uncomment below and update the code to test App
-      //var instane = new IronFunctions.App();
-      //expect(instance).to.be.a(IronFunctions.App);
+  describe('NewTask', function() {
+    it('should create an instance of NewTask', function() {
+      // uncomment below and update the code to test NewTask
+      //var instane = new IronFunctions.NewTask();
+      //expect(instance).to.be.a(IronFunctions.NewTask);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new IronFunctions.App();
+    it('should have the property image (base name: "image")', function() {
+      // uncomment below and update the code to test the property image
+      //var instane = new IronFunctions.NewTask();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property payload (base name: "payload")', function() {
+      // uncomment below and update the code to test the property payload
+      //var instane = new IronFunctions.NewTask();
       //expect(instance).to.be();
     });
 
