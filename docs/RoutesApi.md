@@ -58,7 +58,7 @@ No authorization required
 
 <a name="appsAppRoutesPost"></a>
 # **appsAppRoutesPost**
-> RoutesWrapper appsAppRoutesPost(app, body)
+> RouteWrapper appsAppRoutesPost(app, body)
 
 Create new Route
 
@@ -72,7 +72,7 @@ var apiInstance = new IronFunctions.RoutesApi();
 
 var app = "app_example"; // String | name of the app.
 
-var body = new IronFunctions.RoutesWrapper(); // RoutesWrapper | Array of routes to post.
+var body = new IronFunctions.RouteWrapper(); // RouteWrapper | One route to post.
 
 
 var callback = function(error, data, response) {
@@ -90,11 +90,11 @@ apiInstance.appsAppRoutesPost(app, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app** | **String**| name of the app. | 
- **body** | [**RoutesWrapper**](RoutesWrapper.md)| Array of routes to post. | 
+ **body** | [**RouteWrapper**](RouteWrapper.md)| One route to post. | 
 
 ### Return type
 
-[**RoutesWrapper**](RoutesWrapper.md)
+[**RouteWrapper**](RouteWrapper.md)
 
 ### Authorization
 
