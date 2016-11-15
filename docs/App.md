@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Name of this app. Must be different than the image name. Can ony contain alphanumeric, -, and _. | [optional] 
+**config** | **{String: String}** | Application configuration | [optional] 
 
 
