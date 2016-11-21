@@ -4,11 +4,58 @@ All URIs are relative to *https://127.0.0.1:8080/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**appsAppDelete**](AppsApi.md#appsAppDelete) | **DELETE** /apps/{app} | Delete an app.
 [**appsAppGet**](AppsApi.md#appsAppGet) | **GET** /apps/{app} | Get information for a app.
 [**appsAppPut**](AppsApi.md#appsAppPut) | **PUT** /apps/{app} | Create/update a app.
 [**appsGet**](AppsApi.md#appsGet) | **GET** /apps | Get all app names.
 [**appsPost**](AppsApi.md#appsPost) | **POST** /apps | Post new app
 
+
+<a name="appsAppDelete"></a>
+# **appsAppDelete**
+> appsAppDelete(app)
+
+Delete an app.
+
+Delete an app.
+
+### Example
+```javascript
+var IronFunctions = require('iron_functions');
+
+var apiInstance = new IronFunctions.AppsApi();
+
+var app = "app_example"; // String | Name of the app.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.appsAppDelete(app, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app** | **String**| Name of the app. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="appsAppGet"></a>
 # **appsAppGet**
