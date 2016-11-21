@@ -22,7 +22,7 @@ var IronFunctions = require('iron_functions');
 var apiInstance = new IronFunctions.TasksApi();
 
 var opts = { 
-  'n': 1 // Integer | Number of tasks to return.
+  'n': 1 // Number | Number of tasks to return.
 };
 
 var callback = function(error, data, response) {
@@ -39,7 +39,7 @@ apiInstance.tasksGet(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **n** | **Integer**| Number of tasks to return. | [optional] [default to 1]
+ **n** | **Number**| Number of tasks to return. | [optional] [default to 1]
 
 ### Return type
 

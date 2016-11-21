@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**appsAppRoutesPost**](RoutesApi.md#appsAppRoutesPost) | **POST** /apps/{app}/routes | Create new Route
 [**appsAppRoutesRouteDelete**](RoutesApi.md#appsAppRoutesRouteDelete) | **DELETE** /apps/{app}/routes/{route} | Deletes the route
 [**appsAppRoutesRouteGet**](RoutesApi.md#appsAppRoutesRouteGet) | **GET** /apps/{app}/routes/{route} | Gets route by name
+[**appsAppRoutesRoutePut**](RoutesApi.md#appsAppRoutesRoutePut) | **PUT** /apps/{app}/routes/{route} | Update a Route
 
 
 <a name="appsAppRoutesGet"></a>
@@ -189,6 +190,58 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app** | **String**| Name of app for this set of routes. | 
  **route** | **String**| Route name | 
+
+### Return type
+
+[**RouteWrapper**](RouteWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="appsAppRoutesRoutePut"></a>
+# **appsAppRoutesRoutePut**
+> RouteWrapper appsAppRoutesRoutePut(app, route, body)
+
+Update a Route
+
+Update a route
+
+### Example
+```javascript
+var IronFunctions = require('iron_functions');
+
+var apiInstance = new IronFunctions.RoutesApi();
+
+var app = "app_example"; // String | name of the app.
+
+var route = "route_example"; // String | route path.
+
+var body = new IronFunctions.RouteWrapper(); // RouteWrapper | One route to post.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.appsAppRoutesRoutePut(app, route, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app** | **String**| name of the app. | 
+ **route** | **String**| route path. | 
+ **body** | [**RouteWrapper**](RouteWrapper.md)| One route to post. | 
 
 ### Return type
 
