@@ -1,6 +1,6 @@
 {
   "name": "iron_functions",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "description": "The_open_source_serverless_platform_",
   "license": "Apache-2.0",
   "main": "src/index.js",
