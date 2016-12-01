@@ -9,7 +9,10 @@ Name | Type | Description | Notes
 **headers** | **String** | Map of http headers that will be sent with the response | [optional] 
 **memory** | **Number** | Max usable memory for this route (MiB). | [optional] 
 **type** | **String** | Route type | [optional] 
+**format** | **String** | Payload format sent into function. | [optional] 
+**maxConcurrency** | **Number** | Maximum number of hot containers concurrency | [optional] 
 **config** | **{String: String}** | Route configuration - overrides application configuration | [optional] 
+**timeout** | **Number** | Timeout for executions of this route. Value in Seconds | [optional] 
 
 
 <a name="TypeEnum"></a>
@@ -19,6 +22,19 @@ Name | Type | Description | Notes
 * `sync` (value: `"sync"`)
 
 * `async` (value: `"async"`)
+
+
+
+
+<a name="FormatEnum"></a>
+## Enum: FormatEnum
+
+
+* `default` (value: `"default"`)
+
+* `http` (value: `"http"`)
+
+* `json` (value: `"json"`)
 
 
 

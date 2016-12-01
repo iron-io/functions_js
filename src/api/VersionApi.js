@@ -25,29 +25,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/TaskWrapper', 'model/Error'], factory);
+    define(['ApiClient', 'model/Version'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/TaskWrapper'), require('../model/Error'));
+    module.exports = factory(require('../ApiClient'), require('../model/Version'));
   } else {
     // Browser globals (root is window)
     if (!root.IronFunctions) {
       root.IronFunctions = {};
     }
-    root.IronFunctions.TasksApi = factory(root.IronFunctions.ApiClient, root.IronFunctions.TaskWrapper, root.IronFunctions.Error);
+    root.IronFunctions.VersionApi = factory(root.IronFunctions.ApiClient, root.IronFunctions.Version);
   }
-}(this, function(ApiClient, TaskWrapper, Error) {
+}(this, function(ApiClient, Version) {
   'use strict';
 
   /**
-   * Tasks service.
-   * @module api/TasksApi
+   * Version service.
+   * @module api/VersionApi
    * @version 0.1.21
    */
 
   /**
-   * Constructs a new TasksApi. 
-   * @alias module:api/TasksApi
+   * Constructs a new VersionApi. 
+   * @alias module:api/VersionApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -57,20 +57,19 @@
 
 
     /**
-     * Callback function to receive the result of the tasksGet operation.
-     * @callback module:api/TasksApi~tasksGetCallback
+     * Callback function to receive the result of the versionGet operation.
+     * @callback module:api/VersionApi~versionGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/TaskWrapper} data The data returned by the service call.
+     * @param {module:model/Version} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get next task.
-     * Gets the next task in the queue, ready for processing. Consumers should start processing tasks in order. No other consumer can retrieve this task.
-     * @param {module:api/TasksApi~tasksGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TaskWrapper}
+     * Get daemon version.
+     * @param {module:api/VersionApi~versionGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Version}
      */
-    this.tasksGet = function(callback) {
+    this.versionGet = function(callback) {
       var postBody = null;
 
 
@@ -86,10 +85,10 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = TaskWrapper;
+      var returnType = Version;
 
       return this.apiClient.callApi(
-        '/tasks', 'GET',
+        '/version', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

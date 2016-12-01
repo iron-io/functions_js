@@ -1,25 +1,23 @@
-# IronFunctions.TasksApi
+# IronFunctions.VersionApi
 
 All URIs are relative to *https://127.0.0.1:8080/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tasksGet**](TasksApi.md#tasksGet) | **GET** /tasks | Get next task.
+[**versionGet**](VersionApi.md#versionGet) | **GET** /version | Get daemon version.
 
 
-<a name="tasksGet"></a>
-# **tasksGet**
-> TaskWrapper tasksGet()
+<a name="versionGet"></a>
+# **versionGet**
+> Version versionGet()
 
-Get next task.
-
-Gets the next task in the queue, ready for processing. Consumers should start processing tasks in order. No other consumer can retrieve this task.
+Get daemon version.
 
 ### Example
 ```javascript
 var IronFunctions = require('iron_functions');
 
-var apiInstance = new IronFunctions.TasksApi();
+var apiInstance = new IronFunctions.VersionApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -28,7 +26,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.tasksGet(callback);
+apiInstance.versionGet(callback);
 ```
 
 ### Parameters
@@ -36,7 +34,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TaskWrapper**](TaskWrapper.md)
+[**Version**](Version.md)
 
 ### Authorization
 

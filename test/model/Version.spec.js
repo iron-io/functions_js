@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new IronFunctions.AppsApi();
+    instance = new IronFunctions.Version();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,57 +58,19 @@
       object[property] = value;
   }
 
-  describe('AppsApi', function() {
-    describe('appsAppDelete', function() {
-      it('should call appsAppDelete successfully', function(done) {
-        //uncomment below and update the code to test appsAppDelete
-        //instance.appsAppDelete(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('Version', function() {
+    it('should create an instance of Version', function() {
+      // uncomment below and update the code to test Version
+      //var instane = new IronFunctions.Version();
+      //expect(instance).to.be.a(IronFunctions.Version);
     });
-    describe('appsAppGet', function() {
-      it('should call appsAppGet successfully', function(done) {
-        //uncomment below and update the code to test appsAppGet
-        //instance.appsAppGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property version (base name: "version")', function() {
+      // uncomment below and update the code to test the property version
+      //var instane = new IronFunctions.Version();
+      //expect(instance).to.be();
     });
-    describe('appsAppPut', function() {
-      it('should call appsAppPut successfully', function(done) {
-        //uncomment below and update the code to test appsAppPut
-        //instance.appsAppPut(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('appsGet', function() {
-      it('should call appsGet successfully', function(done) {
-        //uncomment below and update the code to test appsGet
-        //instance.appsGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('appsPost', function() {
-      it('should call appsPost successfully', function(done) {
-        //uncomment below and update the code to test appsPost
-        //instance.appsPost(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

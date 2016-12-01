@@ -25,79 +25,62 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorBody', 'model/Route'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ErrorBody'), require('./Route'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.IronFunctions) {
       root.IronFunctions = {};
     }
-    root.IronFunctions.RouteWrapper = factory(root.IronFunctions.ApiClient, root.IronFunctions.ErrorBody, root.IronFunctions.Route);
+    root.IronFunctions.Version = factory(root.IronFunctions.ApiClient);
   }
-}(this, function(ApiClient, ErrorBody, Route) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The RouteWrapper model module.
-   * @module model/RouteWrapper
+   * The Version model module.
+   * @module model/Version
    * @version 0.1.21
    */
 
   /**
-   * Constructs a new <code>RouteWrapper</code>.
-   * @alias module:model/RouteWrapper
+   * Constructs a new <code>Version</code>.
+   * @alias module:model/Version
    * @class
-   * @param route {module:model/Route} 
    */
-  var exports = function(route) {
+  var exports = function() {
     var _this = this;
 
 
-
-    _this['route'] = route;
   };
 
   /**
-   * Constructs a <code>RouteWrapper</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Version</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RouteWrapper} obj Optional instance to populate.
-   * @return {module:model/RouteWrapper} The populated <code>RouteWrapper</code> instance.
+   * @param {module:model/Version} obj Optional instance to populate.
+   * @return {module:model/Version} The populated <code>Version</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('message')) {
-        obj['message'] = ApiClient.convertToType(data['message'], 'String');
-      }
-      if (data.hasOwnProperty('error')) {
-        obj['error'] = ErrorBody.constructFromObject(data['error']);
-      }
-      if (data.hasOwnProperty('route')) {
-        obj['route'] = Route.constructFromObject(data['route']);
+      if (data.hasOwnProperty('version')) {
+        obj['version'] = ApiClient.convertToType(data['version'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} message
+   * @member {String} version
    */
-  exports.prototype['message'] = undefined;
-  /**
-   * @member {module:model/ErrorBody} error
-   */
-  exports.prototype['error'] = undefined;
-  /**
-   * @member {module:model/Route} route
-   */
-  exports.prototype['route'] = undefined;
+  exports.prototype['version'] = undefined;
 
 
 
