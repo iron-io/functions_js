@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**appsAppRoutesPost**](RoutesApi.md#appsAppRoutesPost) | **POST** /apps/{app}/routes | Create new Route
 [**appsAppRoutesRouteDelete**](RoutesApi.md#appsAppRoutesRouteDelete) | **DELETE** /apps/{app}/routes/{route} | Deletes the route
 [**appsAppRoutesRouteGet**](RoutesApi.md#appsAppRoutesRouteGet) | **GET** /apps/{app}/routes/{route} | Gets route by name
-[**appsAppRoutesRoutePut**](RoutesApi.md#appsAppRoutesRoutePut) | **PUT** /apps/{app}/routes/{route} | Update a Route
+[**appsAppRoutesRoutePatch**](RoutesApi.md#appsAppRoutesRoutePatch) | **PATCH** /apps/{app}/routes/{route} | Update a Route
 
 
 <a name="appsAppRoutesGet"></a>
@@ -63,7 +63,7 @@ No authorization required
 
 Create new Route
 
-Create a new route
+Create a new route in an app, if app doesn&#39;t exists, it creates the app
 
 ### Example
 ```javascript
@@ -204,9 +204,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="appsAppRoutesRoutePut"></a>
-# **appsAppRoutesRoutePut**
-> RouteWrapper appsAppRoutesRoutePut(app, route, body)
+<a name="appsAppRoutesRoutePatch"></a>
+# **appsAppRoutesRoutePatch**
+> RouteWrapper appsAppRoutesRoutePatch(app, route, body)
 
 Update a Route
 
@@ -232,7 +232,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.appsAppRoutesRoutePut(app, route, body, callback);
+apiInstance.appsAppRoutesRoutePatch(app, route, body, callback);
 ```
 
 ### Parameters
