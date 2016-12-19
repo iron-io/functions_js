@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**appsAppDelete**](AppsApi.md#appsAppDelete) | **DELETE** /apps/{app} | Delete an app.
 [**appsAppGet**](AppsApi.md#appsAppGet) | **GET** /apps/{app} | Get information for a app.
-[**appsAppPut**](AppsApi.md#appsAppPut) | **PUT** /apps/{app} | Create/update a app.
+[**appsAppPatch**](AppsApi.md#appsAppPatch) | **PATCH** /apps/{app} | Updates an app.
 [**appsGet**](AppsApi.md#appsGet) | **GET** /apps | Get all app names.
 [**appsPost**](AppsApi.md#appsPost) | **POST** /apps | Post new app
 
@@ -103,11 +103,11 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="appsAppPut"></a>
-# **appsAppPut**
-> AppWrapper appsAppPut(app, body)
+<a name="appsAppPatch"></a>
+# **appsAppPatch**
+> AppWrapper appsAppPatch(app, body)
 
-Create/update a app.
+Updates an app.
 
 You can set app level settings here. 
 
@@ -129,7 +129,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.appsAppPut(app, body, callback);
+apiInstance.appsAppPatch(app, body, callback);
 ```
 
 ### Parameters
