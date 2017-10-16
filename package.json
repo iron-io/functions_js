@@ -1,14 +1,17 @@
 {
   "name": "iron_functions",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "description": "The_open_source_serverless_platform_",
-  "license": "Apache-2.0",
+  "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },
+  "browser": {
+    "fs": false
+  },
   "dependencies": {
-    "superagent": "1.7.1"
+    "superagent": "3.5.2"
   },
   "devDependencies": {
     "mocha": "~2.3.4",
